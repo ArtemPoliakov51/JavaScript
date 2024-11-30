@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Testing JavaScript</title>
+</head>
+<body>
+<p id="First_number"></p>
+<p id="Second_number"></p>
+<p id="Third_number"></p>
+<p id="Sum_text"></p>
+<p id="multiplication_text"></p>
+<p id="average_value_text"></p>
+<script>
+    'use strict';
+    let first = parseInt(prompt("Type first number"));
+    let second = parseInt(prompt("and second number"));
+    let third = parseInt(prompt("and third number"));
+    document.querySelector('#First_number').innerHTML = 'first number' + first;
+    document.querySelector('#Second_number').innerHTML = 'Second number' + second;
+    document.querySelector('#Third_number').innerHTML = 'Third number' + third;
+
+    let Sum = first + second + third
+    let multiplication = first * second * third
+    let average_value = Sum/2
+
+    document.querySelector('#Sum_text').innerHTML = 'Sum:' + Sum;
+    document.querySelector('#multiplication_text').innerHTML = 'multiplication:' + multiplication;
+    document.querySelector('#average_value_text').innerHTML = 'average value:' + average_value;
+</script>
+</body>
+</html>
