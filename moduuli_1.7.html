@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+  }
+  let maara = parseInt(prompt('Type number'));
+  let number = 0
+  for (let i = 0; i < maara ; i++) {
+  let roll = getRandomInt(6) + 1
+  number += roll
+  console.log("number " + number);
+  }
+  </script>
+</body>
+</html>

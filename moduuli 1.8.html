@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <ul id="leap-years"></ul>
+    <script>
+        const startYear = parseInt(prompt("Type start year"));
+        const endYear = parseInt(prompt("Type end year"));
+
+        {
+          const list = document.getElementById("leap-years");
+          for (let year = startYear; year <= endYear; year++) {
+            if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+              const listItem = document.createElement("li");
+              listItem.textContent = year;
+              list.appendChild(listItem);
+            }
+          }
+        }
+    </script>
+</body>
+</html>

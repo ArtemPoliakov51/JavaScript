@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+    <p id="output"></p>
+    <script>
+        const numDice = parseInt(prompt("type number"));
+        const targetSum = parseInt(prompt("Enter your target amount:"));
+        const simulations = 10000;
+
+        if (isNaN(numDice) || isNaN(targetSum) || numDice <= 0 || targetSum <= 0) {
+            document.getElementById("output").textContent = "Incorrect input. Please refresh the page and try again.";
+        } else {
+            let successfulRolls = 0;
+
+            function rollDice(dice) {
+                let total = 0;
+                for (let i = 0; i < dice; i++) {
+                    total += Math.floor(Math.random() * 6) + 1;
+                }
+                return total;
+            }
+
+            for (let i = 0; i < simulations; i++) {
+                if (rollDice(numDice) === targetSum) {
+                    successfulRolls++;
+                }
+            }
+
+            const probability = (successfulRolls / simulations) * 100;
+            document.getElementById("output").textContent =
+                `Probability of getting the amount ${targetSum} с ${numDice} cubes make up ${probability.toFixed(2)}%.`;
+        }
+    </script>
+</body>
+</html>

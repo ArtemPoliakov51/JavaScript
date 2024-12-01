@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<p id="square_root-no"></p>
+<p id="square_root1"></p>
+<body>
+    <script>
+        const question = confirm('Should I calculate the square root?');
+        if (question === true) {
+          let number = parseInt(prompt('Number'));
+          let number1 = Math.sqrt(number);
+          document.querySelector('#square_root1').innerHTML = `${number1}`;
+        }
+        else {
+          document.querySelector('#square_root-no').innerHTML = 'no ?';
+        }
+    </script>
+
+</body>
+</html>
