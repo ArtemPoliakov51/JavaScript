@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 20px;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+article {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+h2 {
+  font-size: 1.2em;
+  margin: 0 0 8px;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
